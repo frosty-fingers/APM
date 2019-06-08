@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+let asset: (x: string) => string =
+    function(x:string): string { return 'assets/images/' + x + '.png'; };
+
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html'
@@ -15,7 +18,7 @@ export class ProductListComponent {
           "description": "Leaf rake with 48-inch wooden handle.",
           "price": 19.95,
           "starRating": 3.2,
-          "imageUrl": "assets/images/rake.png"
+          "imageUrl": asset('rake')
         },
         {
           "productId": 2,
@@ -25,7 +28,7 @@ export class ProductListComponent {
           "description": "15 gallon capacity rolling garden cart",
           "price": 32.99,
           "starRating": 4.2,
-          "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+          "imageUrl": asset('wheelbarrow')
         },
         {
           "productId": 5,
