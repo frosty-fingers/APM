@@ -31,7 +31,7 @@ import { WelcomeComponent } from './home/welcome.component';
       { path: 'welcome', component: WelcomeComponent},
       { path: '', redirectTo: 'welcome', pathMatch: 'full'},
       { path: '**', redirectTo: 'welcome', pathMatch: 'full'}
-    ], { useHash: true})
+    ])
   ],
   bootstrap: [AppComponent]
 })
