@@ -38,7 +38,7 @@ export class ProductListComponent {
           "description": "Curved claw steel hammer",
           "price": 8.9,
           "starRating": 4.8,
-          "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+          "imageUrl": asset('hammer')
         },
         {
           "productId": 8,
@@ -48,7 +48,7 @@ export class ProductListComponent {
           "description": "15-inch steel blade hand saw",
           "price": 11.55,
           "starRating": 3.7,
-          "imageUrl": "https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
+          "imageUrl": asset('saw')
         },
         {
           "productId": 10,
@@ -58,7 +58,7 @@ export class ProductListComponent {
           "description": "Standard two-button video game controller",
           "price": 35.95,
           "starRating": 4.6,
-          "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+          "imageUrl": asset('controller')
         }
       ];
 }
