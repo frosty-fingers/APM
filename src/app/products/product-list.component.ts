@@ -11,6 +11,7 @@ export class ProductListComponent {
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    showImage: boolean = false;
     products: any[] = [
         {
           "productId": 1,
@@ -62,5 +63,9 @@ export class ProductListComponent {
           "starRating": 4.6,
           "imageUrl": asset('controller')
         }
-      ];
+    ];
+    
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 }
