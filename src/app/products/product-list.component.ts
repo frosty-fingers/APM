@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
 
 @Component({
@@ -6,7 +6,7 @@ import { Product } from './product';
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
     asset: (x: string) => string =
     function(x:string): string { return 'assets/images/' + x + '.png'; };
 
@@ -70,5 +70,9 @@ export class ProductListComponent {
 
     toggleImage(): void {
         this.showImage = !this.showImage;
+    };
+
+    ngOnInit(): void {
+        console.log('In OnInit')
     }
 }
