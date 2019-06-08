@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
+import { ProductService } from './product.service';
 
 @Component({
     selector: 'pm-products',
@@ -7,6 +8,7 @@ import { Product } from './product';
     styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
+
     asset: (x: string) => string =
     function(x:string): string { return 'assets/images/' + x + '.png'; };
 
@@ -77,10 +79,10 @@ export class ProductListComponent implements OnInit{
         }
     ];
 
-    constructor() {
-        this.filteredProducts = this.products;
-        this.listFilter = 'cart';
-    }
+    constructor(private productService: ProductService) {
+      this.filteredProducts = this.products;
+      this.listFilter = 'cart';
+    };
 
     performFilter(filterBy: string): Product[] {
         filterBy = filterBy.toLocaleLowerCase();
@@ -94,8 +96,9 @@ export class ProductListComponent implements OnInit{
 
     onRatingClicked(message: string): void {
         this.pageTitle = 'Product List: ' + message;
-    }
+    };
+
     ngOnInit(): void {
         console.log('In OnInit')
-    }
+    };
 }
