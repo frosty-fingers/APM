@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Product } from './product';
 
 @Component({
     selector: 'pm-products',
@@ -23,7 +23,7 @@ export class ProductListComponent {
           "description": "Leaf rake with 48-inch wooden handle.",
           "price": 19.95,
           "starRating": 3.2,
-          "imageUrls": this.asset('rake')
+          "imageUrl": this.asset('rake')
         },
         {
           "productId": 2,
