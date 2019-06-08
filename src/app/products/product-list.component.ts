@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 
-let asset: (x: string) => string =
-    function(x:string): string { return 'assets/images/' + x + '.png'; };
 
 @Component({
     selector: 'pm-products',
     templateUrl: './product-list.component.html'
 })
 export class ProductListComponent {
+    asset: (x: string) => string =
+    function(x:string): string { return 'assets/images/' + x + '.png'; };
+
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string = 'cart';
-    products: any[] = [
+    products: Product[] = [
         {
           "productId": 1,
           "productName": "Leaf Rake",
@@ -22,7 +23,7 @@ export class ProductListComponent {
           "description": "Leaf rake with 48-inch wooden handle.",
           "price": 19.95,
           "starRating": 3.2,
-          "imageUrl": asset('rake')
+          "imageUrls": this.asset('rake')
         },
         {
           "productId": 2,
@@ -32,7 +33,7 @@ export class ProductListComponent {
           "description": "15 gallon capacity rolling garden cart",
           "price": 32.99,
           "starRating": 4.2,
-          "imageUrl": asset('wheelbarrow')
+          "imageUrl": this.asset('wheelbarrow')
         },
         {
           "productId": 5,
@@ -42,7 +43,7 @@ export class ProductListComponent {
           "description": "Curved claw steel hammer",
           "price": 8.9,
           "starRating": 4.8,
-          "imageUrl": asset('hammer')
+          "imageUrl": this.asset('hammer')
         },
         {
           "productId": 8,
@@ -52,7 +53,7 @@ export class ProductListComponent {
           "description": "15-inch steel blade hand saw",
           "price": 11.55,
           "starRating": 3.7,
-          "imageUrl": asset('saw')
+          "imageUrl": this.asset('saw')
         },
         {
           "productId": 10,
@@ -62,7 +63,7 @@ export class ProductListComponent {
           "description": "Standard two-button video game controller",
           "price": 35.95,
           "starRating": 4.6,
-          "imageUrl": asset('controller')
+          "imageUrl": this.asset('controller')
         }
     ];
 
